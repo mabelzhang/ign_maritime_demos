@@ -28,9 +28,22 @@ python shift_negative_elevation.py <infile.asc> <outfile.png>
 ```
 where the ESRI ASCII file is downloaded from GEBCO https://www.gebco.net/ .
 
+### Example
+
 An example pair of input and output files are in `models/Monterey_Bay_130x142_n37s36w-122e-122/materials/textures/`.
 The input is `gebco/gebco_2021_n37.07611083984375_s36.48284912109375_w-122.24212646484376_e-121.69830322265626.asc`.
 The output is `heightmap_shifted.png`.
+
+To satisfy the 2^n + 1 square dimensions requirement, the PNG image is then cropped in any image editing software, e.g. GIMP, to obtain `heightmap_shifted_square.png`.
+In this case, it was resized to 129 x 129 pixels.
+
+The true heights outputted from `shift_negative_elevation.py` were
+```
+Read matrix of size 142 x 130
+Minimum value: -6313 (shift by this value to retrieve true heights)
+Shifting everything up by the minimum value.
+Scaling factor: 7146 (stretch RGB values by this factor to retrieve true heights)
+```
 
 ## To compute values in the SDF model file
 
@@ -48,6 +61,29 @@ been shifted by the script.
 
 For `<size>`, use the scaling factor, which is the full (max - min) range of
 original heights, by which the data was normalized to [0, 255].
+
+### Example
+
+Continuing from the example above, the z is computed as follows.
+
+For simplicity, x and y in `<heightmap><size>` are set to the grid size of 129 x 129.
+z needs to be computed such that it is proportional to x and y in terms of meters.
+
+The data was obtained from latitude boundaries of north 37.07611083984375 to south 36.48284912109375.
+
+Giving the mean latitude of 36.77945 and the GEBCO 2021 grid cell resolution of 15 arc-seconds to OpenDEM Arc2Meters, it computes the result of 370.8380759437494 m.
+That is the approximate distance per grid cell.
+It is approximate because only an average latitude is used to compute it.
+
+z shift in `<pos>` is obtained by dividing the minimum height by the distance in meters:
+```
+-6313 / 370.8380759437494 = -17.023602508814623
+```
+
+z size in `<size>` is obtained by dividing the range in height (i.e. scaling factor used for normalization) by the distance in meters:
+```
+7146 / 370.8380759437494 = 19.26986591604456
+```
 
 ## To try out the world
 
