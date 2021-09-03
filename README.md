@@ -63,6 +63,16 @@ ign gazebo models/montereyBay130x142.sdf
 
 For an exaggerated effect, scale up z in both `<pos>` and `<size>`.
 
+z proportional to x and y:
 
+![xyzProportional_1.png](https://github.com/mabelzhang/ign_maritime_demos/blob/master/models/Monterey_Bay_130x142_n37s36w-122e-122/thumbnails/xyzProportional_1.png)
 
+![xyzProportional_2.png](https://github.com/mabelzhang/ign_maritime_demos/blob/master/models/Monterey_Bay_130x142_n37s36w-122e-122/thumbnails/xyzProportional_2.png)
 
+z exaggerated 10 times:
+
+Now I never want to be there.
+
+![zExaggerated10x_1.png](https://github.com/mabelzhang/ign_maritime_demos/blob/master/models/Monterey_Bay_130x142_n37s36w-122e-122/thumbnails/zExaggerated10x_1.png)
+
+![zExaggerated10x_2.png](https://github.com/mabelzhang/ign_maritime_demos/blob/master/models/Monterey_Bay_130x142_n37s36w-122e-122/thumbnails/zExaggerated10x_2.png)
