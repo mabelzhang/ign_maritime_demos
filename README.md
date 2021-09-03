@@ -60,3 +60,9 @@ and z are approximately proportional:
 ```
 ign gazebo models/montereyBay130x142.sdf 
 ```
+
+For an exaggerated effect, scale up z in both `<pos>` and `<size>`.
+
+
+
+

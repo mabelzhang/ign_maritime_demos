@@ -23,8 +23,12 @@
                  map, by the grid cell size in meters (conversion from GEBCO
                  grid resolution of 15 arc-seconds and the mean latitude of
                  the data region). -->
-            <size>129 129 19.26986591604456</size>
-            <pos>0 0 -17.023602508814623</pos>
+            <!-- Height proportional to x and y -->
+            <!--size>129 129 19.26986591604456</size>
+            <pos>0 0 -17.023602508814623</pos-->
+            <!-- Height exaggerated 10x -->
+            <size>129 129 190.26986591604456</size>
+            <pos>0 0 -170.023602508814623</pos>
           </heightmap>
         </geometry>
       </collision>
@@ -38,8 +42,12 @@
               <size>129</size>
             </texture>
             <uri>materials/textures/heightmap_shifted_square.png</uri>
-            <size>129 129 19.26986591604456</size>
-            <pos>0 0 -17.023602508814623</pos>
+            <!-- Height proportional to x and y -->
+            <!--size>129 129 19.26986591604456</size>
+            <pos>0 0 -17.023602508814623</pos-->
+            <!-- Height exaggerated 10x -->
+            <size>129 129 190.26986591604456</size>
+            <pos>0 0 -170.023602508814623</pos>
           </heightmap>
         </geometry>
       </visual>
