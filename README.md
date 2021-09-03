@@ -1,6 +1,6 @@
 ## Dependencies
 ```
-pip install pillow
+pip install Pillow
 pip install numpy
 ```
 
