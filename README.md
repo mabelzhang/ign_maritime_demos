@@ -39,10 +39,15 @@ In this case, it was resized to 129 x 129 pixels.
 
 The true heights outputted from `shift_negative_elevation.py` were
 ```
+$ python scripts/shift_negative_elevation.py models/Monterey_Bay_130x142_n37s36w-122e-122/materials/textures/gebco/gebco_2021_n37.07611083984375_s36.48284912109375_w-122.24212646484376_e-121.69830322265626.asc models/Monterey_Bay_130x142_n37s36w-122e-122/materials/textures/heightmap_shifted.png
+Loading models/Monterey_Bay_130x142_n37s36w-122e-122/materials/textures/gebco/gebco_2021_n37.07611083984375_s36.48284912109375_w-122.24212646484376_e-121.69830322265626.asc
 Read matrix of size 142 x 130
 Minimum value: -6313 (shift by this value to retrieve true heights)
 Shifting everything up by the minimum value.
+New minimum value: 0
 Scaling factor: 7146 (stretch RGB values by this factor to retrieve true heights)
+Min value after normalizing: 0
+Max value after normalizing: 255
 ```
 
 ## To compute values in the SDF model file

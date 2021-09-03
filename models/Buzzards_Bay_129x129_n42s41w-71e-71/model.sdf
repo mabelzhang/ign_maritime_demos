@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <!-- Bathymetry downloaded from GEBCO (General Bathymetric Chart of the
+       Oceans) 2021.
+       Boundary long/lat:
+       North 41.7934, south 41.255, west -71.0767, east -70.536
+       Grid dimensions: width 129, height 129
+    -->
+  <model name="Buzzards Bay">
+    <static>true</static>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <heightmap>
+            <uri>materials/textures/heightmap.png</uri>
+            <!-- Use grid dimensions, because Ignition orbiting tools aren't
+                 designed to handle huge sizes on the scale of the earth.
+                 To get a depth that has the same approximate scaling ratio to
+                 the x y grid cell size, divide the true height range of the
+                 map, by the grid cell size in meters (conversion from GEBCO
+                 grid resolution of 15 arc-seconds and the mean latitude of
+                 the data region). -->
+            <!-- Height exaggerated 10x -->
+            <size>129 129 4.413840691116286</size>
+            <pos>0 0 1.730917918084818</pos>
+          </heightmap>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <heightmap>
+            <use_terrain_paging>false</use_terrain_paging>
+            <texture>
+              <diffuse>materials/textures/colormap.png</diffuse>
+              <normal>materials/textures/shadedRelief.png</normal>
+              <size>129</size>
+            </texture>
+            <uri>materials/textures/heightmap.png</uri>
+            <!-- Height exaggerated 10x -->
+            <size>129 129 4.413840691116286</size>
+            <pos>0 0 1.730917918084818</pos>
+          </heightmap>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
