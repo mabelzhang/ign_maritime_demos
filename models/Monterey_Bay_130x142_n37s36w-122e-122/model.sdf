@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <!-- Bathymetry downloaded from GEBCO (General Bathymetric Chart of the
+       Oceans) 2021.
+       Boundary coordinates:
+       North 37.07611083984375
+       South 36.48284912109375
+       West -122.24212646484376
+       East -121.69830322265626
+       Grid dimensions: width 130, height 142
+    -->
+  <model name="Monterey Bay">
+    <static>true</static>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <heightmap>
+            <uri>materials/textures/heightmap_shifted_square.png</uri>
+            <!-- Use grid dimensions, because Ignition orbiting tools aren't
+                 designed to handle huge sizes on the scale of the earth.
+                 To get a depth that has the same approximate scaling ratio to
+                 the x y grid cell size, divide the true height range of the
+                 map, by the grid cell size in meters (conversion from GEBCO
+                 grid resolution of 15 arc-seconds and the mean latitude of
+                 the data region). -->
+            <size>129 129 19.26986591604456</size>
+            <pos>0 0 -17.023602508814623</pos>
+          </heightmap>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <heightmap>
+            <use_terrain_paging>false</use_terrain_paging>
+            <texture>
+              <diffuse>materials/textures/colormap_square.png</diffuse>
+              <normal>materials/textures/shadedRelief_square.png</normal>
+              <size>129</size>
+            </texture>
+            <uri>materials/textures/heightmap_shifted_square.png</uri>
+            <size>129 129 19.26986591604456</size>
+            <pos>0 0 -17.023602508814623</pos>
+          </heightmap>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
