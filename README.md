@@ -1,4 +1,4 @@
-Random demos.
+Random maritime demos in Ignition Gazebo.
 
 ## Dependencies
 ```
