@@ -1,10 +1,10 @@
-# Dependencies
+## Dependencies
 ```
 pip install pillow
 pip install numpy
 ```
 
-# To generate a negative-shifted and normalized PNG from ESRI ASCII
+## To generate a negative-shifted and normalized PNG from ESRI ASCII
 
 At the time of writing, Ignition only supports heightmaps by PNG, and the
 heightmap dimensions must be a square sized 2^n + 1.
@@ -30,7 +30,7 @@ An example pair of input and output files are in `models/Monterey_Bay_130x142_n3
 The input is `gebco/gebco_2021_n37.07611083984375_s36.48284912109375_w-122.24212646484376_e-121.69830322265626.asc`.
 The output is `heightmap_shifted.png`.
 
-# To compute values in the SDF model file
+## To compute values in the SDF model file
 
 To compute the full `<heightmap><size>` in meters, x and y need to be derived
 from the grid cell resolution (15 arc-degrees for GEBCO 2021 data) and the
@@ -47,7 +47,7 @@ been shifted by the script.
 For `<size>`, use the scaling factor, which is the full (max - min) range of
 original heights, by which the data was normalized to [0, 255].
 
-# To try out the world
+## To try out the world
 
 Run from the root of this repository, so that `models` path is in the Ignition
 environment variable, for Ignition to find the model:
