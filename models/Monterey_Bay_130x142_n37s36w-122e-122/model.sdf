@@ -12,10 +12,13 @@
   <model name="Monterey Bay">
     <static>true</static>
     <link name="link">
-      <collision name="collision">
+      <!-- Bug: heightmap collides with robot, causing it to float up, when
+           the heightmap is nowhere close to the robot. Removing collision
+           until bug is fixed. -->
+      <!--collision name="collision">
         <geometry>
           <heightmap>
-            <uri>materials/textures/heightmap_shifted_square.png</uri>
+            <uri>materials/textures/heightmap_shifted_square.png</uri-->
             <!-- Use grid dimensions, because Ignition orbiting tools aren't
                  designed to handle huge sizes on the scale of the earth.
                  To get a depth that has the same approximate scaling ratio to
@@ -27,11 +30,11 @@
             <!--size>129 129 19.26986591604456</size>
             <pos>0 0 -17.023602508814623</pos-->
             <!-- Height exaggerated 10x -->
-            <size>129 129 192.6986591604456</size>
+            <!--size>129 129 192.6986591604456</size>
             <pos>0 0 -170.23602508814623</pos>
           </heightmap>
         </geometry>
-      </collision>
+      </collision-->
       <visual name="visual">
         <geometry>
           <heightmap>
