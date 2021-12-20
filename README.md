@@ -119,3 +119,12 @@ Now I never want to be there.
 ![zExaggerated10x_1.png](https://github.com/mabelzhang/ign_maritime_demos/blob/master/models/Monterey_Bay_130x142_n37s36w-122e-122/thumbnails/zExaggerated10x_1.png)
 
 ![zExaggerated10x_2.png](https://github.com/mabelzhang/ign_maritime_demos/blob/master/models/Monterey_Bay_130x142_n37s36w-122e-122/thumbnails/zExaggerated10x_2.png)
+
+Another example:
+```
+ign gazebo models/buzzardsBay129x129.sdf
+```
+
+![zExaggerated10x_1.png](https://github.com/mabelzhang/ign_maritime_demos/blob/master/models/Buzzards_Bay_129x129_n42s41w-71e-71/thumbnails/zExaggerated10x_1.png)
+
+![zExaggerated10x_2.png](https://github.com/mabelzhang/ign_maritime_demos/blob/master/models/Buzzards_Bay_129x129_n42s41w-71e-71/thumbnails/zExaggerated10x_2.png)

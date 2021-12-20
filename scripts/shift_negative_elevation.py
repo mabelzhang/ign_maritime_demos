@@ -90,6 +90,7 @@ def shift_negative_values(data):
 
   min_val = data.flatten().min()
   print('Minimum value: %g (shift by this value to retrieve true heights)' % min_val)
+  print('Maximum value: %g' % data.flatten().max())
 
   if min_val < 0:
     print ('Shifting everything up by the minimum value.')
